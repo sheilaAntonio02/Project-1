@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- Large Screen -->
+        <nav class="hidden lg:block">
+            <div class="bg-black px-5 py-1 w-full h-fit">
+                <div class="flex justify-between px-20 text-white gap-3">
+                    <div class="flex items-center g-2">
+                        <p class="text-sm">
+                            <i class="fa-solid fa-location-dot text-emerald-300"></i>
+                            Ramkrishana Nagar, Shorangpur, Ghana Colony, Patna 800027
+                        </p>
+                        <p class="text-sm">
+                            <i class="fa-solid fa-phone-volume text-emerald-400"></i>
+                            Aakash Raj: +91 9304049971
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="flex items-center gap-1">
+                            <button class="w-6 h-6 rounded-full  bg-white "><i
+                                    class="fa-solid fa-phone text-black text-center text-sm hover:text-emerald-400"></i></button>
+                            <p class="text-sm hover:text-emerald-400 cursor-pointer">Whatsapp</p>
+                        </div>
+                        <div class="flex items-center gap-1">
+                            <i
+                                class="fa-solid fa-table-cells-large text-white text-center text-sm hover:text-emerald-400"></i>
+                            <p class="text-sm hover:text-emerald-400 cursor-pointer">Verify Certificate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-teal-700 px-5 py-1 w-full h-fit flex justify-center items-center ">
+                <p class="text-white text-sm">🎉 Admissions Open 2026: AICTE 120-Hours Industrial Internship & Direct
+                    PPO Hiring Drive! Use Code SNAP50 for 50% Scholarship. Helpline: Aakash Raj (9304049971)</p>
+            </div>
+            <div class="flex justify-center items-center px-10 py-3 bg-gray-100 w-full">
+                <div class="flex items-center w-280">
+                    <div class="flex items-center">
+                        <img class="w-12 h-12 rounded-full"
+                            src="https://i1.sndcdn.com/artworks-Cd1lPdzGhwOyaljq-ELnozA-t500x500.jpg" alt="">
+                        <div>
+                            <p class="text-teal-700 text-xl font-bold">SNAP<span class="text-black">INTERN</span></p>
+                            <p class="text-xs font-arial font-semibold text-gray-500 w-50">SNAP INTO THE FUTURE</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center gap-3  ">
+                        <div class="flex items-center gap-5">
+                            <div class="flex items-center">
+                                <i class="fa-solid fa-house text-sm text-gray-700"></i>
+                                <a class="text-gray-700 font-semibold text-md hover:text-emerald-700 hover:underline cursor-pointer font-arial"
+                                    href="#one">Home</a>
+                            </div>
+                            <div>
+                                <a class="text-gray-700 font-semibold text-md hover:text-emerald-700 hover:underline cursor-pointer font-arial"
+                                    href="#two">Internship & Courses</a>
+                            </div>
+                            <div>
+                                <a class="text-gray-700 font-semibold text-md hover:text-emerald-700 hover:underline cursor-pointer font-arial"
+                                    href="#three">Jobs & PPOs</a>
+                            </div>
+                            <div>
+                                <a class="text-gray-700 font-semibold text-md hover:text-emerald-700 hover:underline cursor-pointer font-arial"
+                                    href="#four">Verify Certificate</a>
+                            </div>
+                            <div>
+                                <a class="text-gray-700 font-semibold text-md hover:text-emerald-700 hover:underline cursor-pointer font-arial"
+                                    href="#five">Gallery</a>
+                            </div>
+                            <div>
+                                <a class="text-gray-700 font-semibold text-md hover:text-emerald-700 hover:underline cursor-pointer font-arial"
+                                    href="#five">Testimonials</a>
+                            </div>
+                            <div>
+                                <a class="text-gray-700 font-semibold text-md hover:text-emerald-700 hover:underline cursor-pointer font-arial"
+                                    href="#five">Grievance & Contact</a>
+                            </div>
+                        </div>
+                        <button @click="loginbtn"
+                            class="p-1 text-gray-700 font-semibold w-25 text-teal-700 text-md hover:bg-teal-50 cursor-pointer font-arial border-2 border-teal-700 rounded-2xl"><i
+                                class="fa-solid fa-right-to-bracket"></i>Portal Login</button>
+                        <button @click="registerbtn"
+                            class="py-1 px-3 text-gray-700 font-semibold w-20 text-white text-md bg-teal-700 hover:bg-teal-800 cursor-pointer font-arial  rounded-2xl">Register
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section id="one"
+            class="bg-linear-to-r from-sky-950 from-10% via-sky-900 via-30% to-teal-300 to-90% hidden lg:block">
+            <div class="w-full h-fit py-15 flex justify-center items-center gap-15 px-25">
+                <div class="space-y-8">
+                    <div class="px-3 py-1 rounded-full border border-white bg-white/30 backdrop-blur w-fit">
+                        <p class="font-arial text-teal-200 text-sm text-bold"><i class="fa-solid fa-circle"></i>
+                            SNAPINTERN • SNAP INTO YOUR FUTURE • PATNA, BIHAR</p>
+                    </div>
+                    <div class="space-y-3">
+                        <h1 class="text-white text-5xl font-bold font-arial">India's Premier <span
+                                class="text-teal-300">120-Hours Internship, LMS</span> & Direct <span
+                                class="text-yellow-300">PPO Hiring</span> Ecosystem</h1>
+                        <p class="text-gray-200 text-md font-bold font-arial">Live & Recorded Classes, Dedicated
+                            120-Hours Interactive HTML Courseware, AI Resume Builder, ATS CV Checker, AI Mock Interview,
+                            Course-Based Auto-Filled Reports & Dual-Key Verified QR Certificates.</p>
+                    </div>
+                    <div class="space-x-3">
+                        <button @click="registerbtn"
+                            class="bg-teal-200 px-4 py-5 rounded-lg font-arial text-sm font-bold">Register for
+                            Internship <i class="fa-solid fa-arrow-right-long"></i></button>
+                        <button
+                            class="border border-white bg-white/30 backdrop-blur px-4 py-5 rounded-lg font-arial text-sm font-bold text-white"><i
+                                class="fa-brands fa-whatsapp text-teal-300 text-lg"></i> Hepline:+919304049971 </button>
+                    </div>
+                    <div class="border-b w-190 px-5 py-2 border-gray-50"></div>
+                    <div class="px-3 flex justify-around items-center">
+                        <div>
+                            <h1 class="font-arial text-2xl text-white font-bold">25,400+</h1>
+                            <p class="text-teal-200 text-xs font-arial">Registered Interns</p>
+                        </div>
+                        <div>
+                            <h1 class="font-arial text-2xl text-teal-200 font-bold">150+</h1>
+                            <p class="text-teal-200 text-xs font-arial">Partner Colleges</p>
+                        </div>
+                        <div>
+                            <h1 class="font-arial text-2xl text-yellow-300 font-bold">110+</h1>
+                            <p class="text-teal-200 text-xs font-arial">Hiring Company</p>
+                        </div>
+                        <div>
+                            <h1 class="font-arial text-2xl text-white font-bold">100%</h1>
+                            <p class="text-teal-200 text-xs font-arial">QR Verified Docs</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg w-200 h-fit px-10 py-8">
+                    <div class="flex justify-center items-center gap-7 ">
+                        <div class="">
+                            <p class="font-arial font-bold text-lg">Unified Portal Login</p>
+                            <p class="font-arial text-sm text-gray-500">Enter your registered Login ID & Password to
+                                access your portal</p>
+                        </div>
+                        <div>
+                            <button
+                                class="px-2 py-1 bg-teal-200 rounded-full text-center font-arial text-sm">Secure</button>
+                        </div>
+                    </div>
+                    <div class="border-b-1 w-110 px-5 py-2 border-gray-300"></div>
+                    <div class="pt-5 space-y-3">
+                        <div class="">
+                            <p class="text-sm font-bold font-arial">User ID / Official Email / Registration No.</p>
+                            <input type="text" placeholder="Enter your Email or Login your ID"
+                                class="text-md font-arial border border-gray-300 w-110 rounded-md py-1 px-3 hover:border-2 hover:border-teal-400">
+                        </div>
+                        <div class="">
+                            <p class="text-sm font-bold font-arial">Password</p>
+                            <input type="text" placeholder="Enter your password"
+                                class="text-md font-arial border border-gray-300 w-110 rounded-md py-1 px-3 hover:border-2 hover:border-teal-400">
+                        </div>
+                        <button @click="loginbtn"
+                            class="bg-teal-600 text-center text-md font-arial font-bold text-white w-110 py-3 rounded-xl">Sign
+                            In to Portal <i class="fa-solid fa-right-to-bracket"></i></button>
+                    </div>
+                    <div class="border-b-1 w-110 px-5 py-2 border-gray-300"></div>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="font-arial text-sm text-gray-500">New Student? <span @click="registerbtn"
+                                    class="text-teal-600 font-semibold cursor-pointer hover:underline">Create
+                                    Account</span></p>
+                        </div>
+                        <div>
+                            <p @click="loginbtn" class="font-arial text-sm text-gray-500 font-semibold cursor-pointer">
+                                Forgot Password?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Medium Screen -->
+        <nav class="hidden md:block lg:hidden">
+            <div class="bg-black px-2 py-1 w-full h-fit sticky z-50">
+                <div class="flex justify-between px-20 text-white gap-3">
+                    <div class="flex items-center g-2">
+                        <p class="text-sm">
+                            <i class="fa-solid fa-location-dot text-emerald-300"></i>
+                            Ramkrishana Nagar, Shorangpur, Ghana Colony, Patna 800027
+                        </p>
+                        <p class="text-sm">
+                            <i class="fa-solid fa-phone-volume text-emerald-400"></i>
+                            Aakash Raj: +91 9304049971
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="flex items-center gap-1">
+                            <button class="w-6 h-6 rounded-full  bg-white "><i
+                                    class="fa-solid fa-phone text-black text-center text-sm hover:text-emerald-400"></i></button>
+                            <p class="text-sm hover:text-emerald-400 cursor-pointer">Whatsapp</p>
+                        </div>
+                        <div class="flex items-center gap-1">
+                            <i
+                                class="fa-solid fa-table-cells-large text-white text-center text-sm hover:text-emerald-400"></i>
+                            <p class="text-sm hover:text-emerald-400 cursor-pointer">Verify Certificate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-teal-700 px-5 py-1 w-full h-fit flex justify-center items-center sticky z-50">
+                <p class="text-white text-sm">🎉 Admissions Open 2026: AICTE 120-Hours Industrial Internship & Direct
+                    PPO Hiring Drive! Use Code SNAP50 for 50% Scholarship. Helpline: Aakash Raj (9304049971)</p>
+            </div>
+            <div class="flex justify-center items-center py-3 px-10 bg-gray-100 w-full sticky top-0 z-50">
+                <div class="flex justify-between items-center gap-2 w-full">
+                    <div class="flex items-center">
+                        <img class="w-12 h-12 rounded-full"
+                            src="https://i1.sndcdn.com/artworks-Cd1lPdzGhwOyaljq-ELnozA-t500x500.jpg" alt="">
+                        <div>
+                            <p class="text-teal-700 text-xl font-bold">SNAP<span class="text-black">INTERN</span></p>
+                            <p class="text-sm font-arial font-semibold text-gray-500">SNAP INTO THE FUTURE</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center gap-3 pl-3">
+                        <button @click="loginbtn"
+                            class="p-1 text-gray-700 font-semibold w-30 text-teal-700 text-md hover:bg-teal-50 cursor-pointer font-arial border-2 border-teal-700 rounded-2xl"><i
+                                class="fa-solid fa-right-to-bracket"></i>Portal Login</button>
+                        <button @click="registerbtn"
+                            class="py-2 text-gray-700 shadow-xl font-semibold w-40 text-white text-md bg-teal-700 hover:bg-teal-800 cursor-pointer font-arial rounded-2xl">Register
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section
+            class="bg-linear-to-r from-sky-950 from-10% via-sky-900 via-30% to-teal-300 to-90% hidden md:block lg:hidden">
+            <div class="w-full h-fit py-15 flex flex-col justify-center items-center gap-15 px-25">
+                <div class="space-y-8">
+                    <div class="px-3 py-1 rounded-full border border-white bg-white/30 backdrop-blur w-fit">
+                        <p class="font-arial text-teal-200 text-sm text-bold"><i class="fa-solid fa-circle"></i>
+                            SNAPINTERN • SNAP INTO YOUR FUTURE • PATNA, BIHAR</p>
+                    </div>
+                    <div class="space-y-3">
+                        <h1 class="text-white text-5xl font-bold font-arial">India's Premier <span
+                                class="text-teal-300">120-Hours Internship, LMS</span> & Direct <span
+                                class="text-yellow-300">PPO Hiring</span> Ecosystem</h1>
+                        <p class="text-gray-200 text-md font-bold font-arial">Live & Recorded Classes, Dedicated
+                            120-Hours Interactive HTML Courseware, AI Resume Builder, ATS CV Checker, AI Mock Interview,
+                            Course-Based Auto-Filled Reports & Dual-Key Verified QR Certificates.</p>
+                    </div>
+                    <div class="space-x-3">
+                        <button @click="registerbtn"
+                            class="bg-teal-200 px-4 py-5 rounded-lg font-arial text-sm font-bold">Register for
+                            Internship <i class="fa-solid fa-arrow-right-long"></i></button>
+                        <button
+                            class="border border-white bg-white/30 backdrop-blur px-4 py-5 rounded-lg font-arial text-sm font-bold text-white"><i
+                                class="fa-brands fa-whatsapp text-teal-300 text-lg"></i>Hepline:+919304049971 </button>
+                    </div>
+                    <div class="border-b w-190 px-5 py-2 border-gray-50"></div>
+                    <div class="px-3 flex justify-around items-center">
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-house text-sm text-gray-700"></i>
+                            <a class="text-gray-700 font-semibold text-md hover:text-emerald-700 hover:underline cursor-pointer font-arial"
+                                href="#one">Home</a>
+                        </div>
+                        <div>
+                            <a class="text-gray-700 font-semibold text-md hover:text-emerald-700 hover:underline cursor-pointer font-arial"
+                                href="#two">Internship & Courses</a>
+                        </div>
+                        <div>
+                            <a class="text-gray-700 font-semibold text-md hover:text-emerald-700 hover:underline cursor-pointer font-arial"
+                                href="#three">Jobs & PPOs</a>
+                        </div>
+                        <div>
+                            <a class="text-gray-700 font-semibold text-md hover:text-emerald-700 hover:underline cursor-pointer font-arial"
+                                href="#four">Verify Certificate</a>
+                        </div>
+                        <div>
+                            <a class="text-gray-700 font-semibold text-md hover:text-emerald-700 hover:underline cursor-pointer font-arial"
+                                href="#five">Gallery</a>
+                        </div>
+                        <div>
+                            <a class="text-gray-700 font-semibold text-md hover:text-emerald-700 hover:underline cursor-pointer font-arial"
+                                href="#five">Testimonials</a>
+                        </div>
+                        <div>
+                            <a class="text-gray-700 font-semibold text-md hover:text-emerald-700 hover:underline cursor-pointer font-arial"
+                                href="#five">Grievance & Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg w-200 h-fit px-10 py-8">
+                    <div class="flex justify-center items-center gap-7 ">
+                        <div class="">
+                            <p class="font-arial font-bold text-lg">Unified Portal Login</p>
+                            <p class="font-arial text-sm text-gray-500">Enter your registered Login ID & Password to
+                                access your portal</p>
+                        </div>
+                        <div>
+                            <button
+                                class="px-2 py-1 bg-teal-200 rounded-full text-center font-arial text-sm">Secure</button>
+                        </div>
+                    </div>
+                    <div class="border-b-1 w-110 px-5 py-2 border-gray-300"></div>
+                    <div class="pt-5 space-y-3">
+                        <div class="">
+                            <p class="text-sm font-bold font-arial">User ID / Official Email / Registration No.</p>
+                            <input type="text" placeholder="Enter your Email or Login your ID"
+                                class="text-md font-arial border border-gray-300 w-110 rounded-md py-1 px-3 hover:border-2 hover:border-teal-400">
+                        </div>
+                        <div class="">
+                            <p class="text-sm font-bold font-arial">Password</p>
+                            <input type="text" placeholder="Enter your password"
+                                class="text-md font-arial border border-gray-300 w-110 rounded-md py-1 px-3 hover:border-2 hover:border-teal-400">
+                        </div>
+                        <button @click="loginbtn"
+                            class="bg-teal-600 text-center text-md font-arial font-bold text-white w-110 py-3 rounded-xl">Sign
+                            In to Portal <i class="fa-solid fa-right-to-bracket"></i></button>
+                    </div>
+                    <div class="border-b-1 w-110 px-5 py-2 border-gray-300"></div>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="font-arial text-sm text-gray-500">New Student? <span @click="registerbtn"
+                                    class="text-teal-600 font-semibold hover:underline">Create Account</span></p>
+                        </div>
+                        <div>
+                            <p @click="loginbtn" class="font-arial text-sm text-gray-500 font-semibold">Forgot Password?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- small screen -->
+        <nav class="block md:hidden lg:hidden min-w-2xl">
+            <div class="bg-black px-2 py-1 w-full h-fit sticky z-50">
+                <div class="flex flex-col justify-between px-3 text-white gap-3">
+                    <div class="flex flex-col justify-start g-2">
+                        <p class="text-sm">
+                            <i class="fa-solid fa-location-dot text-emerald-300"></i>
+                            Ramkrishana Nagar, Shorangpur, Ghana Colony, Patna 800027
+                        </p>
+                        <p class="text-sm">
+                            <i class="fa-solid fa-phone-volume text-emerald-400"></i>
+                            Aakash Raj: +91 9304049971
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="flex items-center gap-1">
+                            <button class="w-6 h-6 rounded-full  bg-white "><i
+                                    class="fa-solid fa-phone text-black text-center text-sm hover:text-emerald-400"></i></button>
+                            <p class="text-sm hover:text-emerald-400 cursor-pointer">Whatsapp</p>
+                        </div>
+                        <div class="flex items-center gap-1">
+                            <i
+                                class="fa-solid fa-table-cells-large text-white text-center text-sm hover:text-emerald-400"></i>
+                            <p class="text-sm hover:text-emerald-400 cursor-pointer">Verify Certificate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-teal-700 px-5 py-1 w-full h-fit flex justify-center items-center sticky z-50">
+                <p class="text-white text-sm">🎉 Admissions Open 2026: AICTE 120-Hours Industrial Internship & Direct
+                    PPO Hiring Drive! Use Code SNAP50 for 50% Scholarship. Helpline: Aakash Raj (9304049971)</p>
+            </div>
+            <div class="flex justify-center items-center py-3 px-10 bg-gray-100 w-full sticky top-0 z-50">
+                <div class="flex justify-between items-center gap-2 w-full">
+                    <div class="flex items-center">
+                        <img class="w-12 h-12 rounded-full"
+                            src="https://i1.sndcdn.com/artworks-Cd1lPdzGhwOyaljq-ELnozA-t500x500.jpg" alt="">
+                        <div>
+                            <p class="text-teal-700 text-xl font-bold">SNAP<span class="text-black">INTERN</span></p>
+                            <p class="text-sm font-arial font-semibold text-gray-500">SNAP INTO THE FUTURE</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center gap-3 pl-3">
+                        <button @click="loginbtn"
+                            class="p-1 text-gray-700 font-semibold w-30 text-teal-700 text-md hover:bg-teal-500 cursor-pointer font-arial border-2 border-teal-700 rounded-2xl"><i
+                                class="fa-solid fa-right-to-bracket"></i>Portal Login</button>
+                        <button @click="registerbtn"
+                            class="py-2 text-gray-700 shadow-xl font-semibold w-40 text-white text-md bg-teal-700 hover:bg-teal-800 cursor-pointer font-arial rounded-2xl">Register
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section
+            class="bg-linear-to-r from-sky-950 from-10% via-sky-900 via-30% to-teal-300 to-90% block md:hidden lg:hidden">
+            <div class="w-full h-fit py-15 flex flex-col justify-center items-center gap-15 px-25">
+                <div class="space-y-8">
+                    <div class="px-3 py-1 rounded-full border border-white bg-white/30 backdrop-blur w-fit">
+                        <p class="font-arial text-teal-200 text-sm text-bold"><i class="fa-solid fa-circle"></i>
+                            SNAPINTERN • SNAP INTO YOUR FUTURE • PATNA, BIHAR</p>
+                    </div>
+                    <div class="space-y-3">
+                        <h1 class="text-white text-5xl font-bold font-arial">India's Premier <span
+                                class="text-teal-300">120-Hours Internship, LMS</span> & Direct <span
+                                class="text-yellow-300">PPO Hiring</span> Ecosystem</h1>
+                        <p class="text-gray-200 text-md font-bold font-arial">Live & Recorded Classes, Dedicated
+                            120-Hours Interactive HTML Courseware, AI Resume Builder, ATS CV Checker, AI Mock Interview,
+                            Course-Based Auto-Filled Reports & Dual-Key Verified QR Certificates.</p>
+                    </div>
+                    <div class="space-x-3">
+                        <button @click="registerbtn"
+                            class="bg-teal-200 px-4 py-5 rounded-lg font-arial text-sm font-bold">Register for
+                            Internship <i class="fa-solid fa-arrow-right-long"></i></button>
+                        <button
+                            class="border border-white bg-white/30 backdrop-blur px-4 py-5 rounded-lg font-arial text-sm font-bold text-white"><i
+                                class="fa-brands fa-whatsapp text-teal-300 text-lg"></i>Hepline:+919304049971 </button>
+                    </div>
+                    <div class="border-b w-110 px-5 py-2 border-gray-50"></div>
+                </div>
+                <div class="bg-white rounded-lg w-fit h-fit px-10 py-8">
+                    <div class="flex justify-center items-center gap-7 ">
+                        <div class="">
+                            <p class="font-arial font-bold text-lg">Unified Portal Login</p>
+                            <p class="font-arial text-sm text-gray-500">Enter your registered Login ID & Password to
+                                access your portal</p>
+                        </div>
+                        <div>
+                            <button
+                                class="px-2 py-1 bg-teal-200 rounded-full text-center font-arial text-sm">Secure</button>
+                        </div>
+                    </div>
+                    <div class="border-b-1 w-110 px-5 py-2 border-gray-300"></div>
+                    <div class="pt-5 space-y-3">
+                        <div class="">
+                            <p class="text-sm font-bold font-arial">User ID / Official Email / Registration No.</p>
+                            <input type="text" placeholder="Enter your Email or Login your ID"
+                                class="text-md font-arial border border-gray-300 w-110 rounded-md py-1 px-3 hover:border-2 hover:border-teal-400">
+                        </div>
+                        <div class="">
+                            <p class="text-sm font-bold font-arial">Password</p>
+                            <input type="text" placeholder="Enter your password"
+                                class="text-md font-arial border border-gray-300 w-110 rounded-md py-1 px-3 hover:border-2 hover:border-teal-400">
+                        </div>
+                        <button @click="loginbtn"
+                            class="bg-teal-600 text-center text-md font-arial font-bold text-white w-110 py-3 rounded-xl">Sign
+                            In to Portal <i class="fa-solid fa-right-to-bracket"></i></button>
+                    </div>
+                    <div class="border-b-1 w-110 px-5 py-2 border-gray-300"></div>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="font-arial text-sm text-gray-500">New Student? <span @click="registerbtn"
+                                    class="text-teal-600 font-semibold hover:underline">Create Account</span></p>
+                        </div>
+                        <div>
+                            <p @click="loginbtn" class="font-arial text-sm text-gray-500 font-semibold">Forgot Password?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- login modal -->
+        <div v-if="logIn">
+            <div id="login-popup" tabindex="-1"
+                class="bg-black/50 overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 h-full items-center justify-center flex">
+                <div class="relative p-4 w-full max-w-md h-full md:h-auto">
+
+                    <div class="relative bg-white w-130 rounded-lg shadow">
+                        <button @click="xbtn" type="button"
+                            class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center popup-close"><svg
+                                aria-hidden="true" class="w-5 h-5" fill="#c6c7c7" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                    cliprule="evenodd"></path>
+                            </svg>
+                            <span class="sr-only">Close popup</span>
+                        </button>
+
+                        <div class="py-5 px-6">
+                            <div class="px-4 py-3 flex justify-start items-center">
+                                <img class="w-12 h-12 rounded-full"
+                                    src="https://i1.sndcdn.com/artworks-Cd1lPdzGhwOyaljq-ELnozA-t500x500.jpg" alt="">
+                                <div>
+                                    <p class="text-teal-700 text-xl font-bold">SNAP<span
+                                            class="text-black">INTERN</span>
+                                    </p>
+                                    <p class="text-xs font-arial font-semibold text-gray-500">SNAP INTO THE FUTURE</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center gap-5 w-full">
+                                <p @click="firstbtn"
+                                    class="text-sm font-arial font-bold text-gray-600 hover:text-emerald-600 cursor-pointer">
+                                    🔐 Unified Portal Login</p>
+                                <p @click="secondbtn"
+                                    class="text-sm font-arial font-bold text-gray-600 hover:text-emerald-600 cursor-pointer">
+                                    📝 New Candidate Registration</p>
+                            </div>
+                            <div class="border-b border-gray-600 my-2 w-115"></div>
+                            <form v-if="first" class="w-full py-2">
+                                <p class="text-gray-700 text-xs font-bold pb-2">Login ID / Official Email / Registration
+                                    No.
+                                    *</p>
+                                <label for="email" class="sr-only">Email address</label>
+                                <input name="email" type="email" autocomplete="email" required=""
+                                    class="block w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-black focus:ring-offset-1"
+                                    placeholder="e.g. admin@snapintern.com or student@snapintern.com" value="">
+                                <p class="text-gray-700 text-xs font-bold pt-2">Password*</p>
+                                <label for="password" class="sr-only">Password</label>
+                                <input name="password" type="password" autocomplete="current-password" required=""
+                                    class="mt-2 block w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-black focus:ring-offset-1"
+                                    placeholder="Password" value="">
+                                <button type="submit"
+                                    class="inline-flex w-full items-center justify-center mt-3 rounded-lg bg-teal-700 hover:bg-teal-600 p-2 py-3 text-sm font-medium text-white outline-none focus:ring-2 focus:ring-black focus:ring-offset-1 disabled:bg-gray-400">
+                                    Sign In <i class="fa-solid fa-arrow-right-long"></i>
+                                </button>
+                                <div
+                                    class="mt-6 text-center text-sm text-slate-600 border border-gray-300 px-3 py-2 shadow-sm rounded-lg">
+                                    <i class="fa-solid fa-play text-xs"></i> 🔑 Official Login Credentials (ID &
+                                    Password
+                                    List)
+                                </div>
+                            </form>
+                            <form v-if="second" class="w-full py-2">
+                                <div class="flex justify-center items-center gap-3">
+                                    <div>
+                                        <p class="text-gray-700 text-xs font-bold pb-2">Student Full Name *</p>
+                                        <input name="email" type="email" autocomplete="email" required=""
+                                            class="block w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-black focus:ring-offset-1">
+                                        <p class="text-gray-700 text-xs font-bold pt-2">Mobile Number *</p>
+                                        <input name="password" type="number" autocomplete="current-password" required=""
+                                            class="mt-2 block w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-black focus:ring-offset-1">
+                                        <p class="text-gray-700 text-xs font-bold pt-2">College Name *</p>
+                                        <input name="password" type="text" autocomplete="current-password" required=""
+                                            class="mt-2 block w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-black focus:ring-offset-1">
+                                        <p class="text-gray-700 text-xs font-bold pt-2">Course, Dept & Branch *</p>
+                                        <select
+                                            class="mt-2 block w-full text-xs font-arial rounded-lg border border-gray-300 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-black focus:ring-offset-1"
+                                            name="" id="">
+                                            <option class="text-xs font-arial" value="">B.Tech – CSE (2022-2026)
+                                            </option>
+                                            <option class="text-xs font-arial" value="">B.Tech – Electrical (EE)
+                                            </option>
+                                            <option class="text-xs font-arial" value="">B.Tech – Civil (CE)</option>
+                                            <option class="text-xs font-arial" value="">Diploma – Mechanical</option>
+                                            <option class="text-xs font-arial" value="">BCA – Computer Applications
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-700 text-xs font-bold pb-2">Email ID *
+                                            <input name="email" type="email" autocomplete="email" required=""
+                                                class="block w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-black focus:ring-offset-1">
+                                        <p class="text-gray-700 text-xs font-bold pt-2">University Roll No *</p>
+                                        <input name="password" type="text" autocomplete="current-password" required=""
+                                            class="mt-2 block w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-black focus:ring-offset-1">
+                                        <p class="text-gray-700 text-xs font-bold pt-2">District (Auto Default Pass) *
+                                        </p>
+                                        <select
+                                            class="mt-2 block w-full text-xs font-arial text-emerald-700 font-bold rounded-lg border border-gray-300 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-black focus:ring-offset-1"
+                                            name="" id="">
+                                            <option class="text-xs font-arial text-emerald-700 font-bold" value="">Patna
+                                                (Pass: patna@123)
+                                            </option>
+                                            <option class="text-xs font-arial text-emerald-700 font-bold" value="">Gaya
+                                                (Pass: gaya@123)
+                                            </option>
+                                            <option class="text-xs font-arial text-emerald-700 font-bold" value="">
+                                                Rohtas (Pass: rohtas@123)</option>
+                                            <option class="text-xs font-arial text-emerald-700 font-bold" value="">
+                                                Araria (Pass: araria@123)</option>
+                                        </select>
+                                        <p class="text-gray-700 text-xs font-bold pt-2">Select Internship / Course *</p>
+                                        <select
+                                            class="mt-2 block w-full text-xs font-arial font-bold text-emerald-700 rounded-lg border border-gray-300 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-black focus:ring-offset-1"
+                                            name="" id="">
+                                            <option class="text-xs font-arial font-bold" value="">AI & Machine Learning
+                                                (120
+                                                Hours)
+                                            </option>
+                                            <option class="text-xs font-arial font-bold" value="">Embedded Systems, IoT
+                                                & Robotics
+                                            </option>
+                                            <option class="text-xs font-arial font-bold" value="">Full-Stack Web
+                                                Development
+                                                (MERN)</option>
+                                            <option class="text-xs font-arial font-bold" value="">AutoCAD 2D/3D
+                                                Structural Design
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <button type="submit"
+                                    class="inline-flex w-full items-center justify-center mt-3 rounded-lg bg-teal-700 hover:bg-teal-600 p-2 py-3 text-sm font-medium text-white outline-none focus:ring-2 focus:ring-black focus:ring-offset-1 disabled:bg-gray-400">
+                                    Complete Registration & Join Official Channels<i class="fa-solid fa-check"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="bg-gray-100 w-full h-fit px-4 sm:px-8 lg:px-30 py-10" id="two">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                    <p class="text-xs text-teal-600 font-arial font-semibold">
+                        AICTE Industry Aligned
+                    </p>
+                    <h1 class="font-arial font-bold text-2xl">
+                        Featured Internships 120-Hours Industrial Training
+                    </h1>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                    <input
+                        class="text-md font-arial border border-gray-300 w-fit bg-white rounded-md py-1 px-3 hover:border-2 hover:border-teal-400"
+                        placeholder="Search domain or course" type="text" />
+                    <button @click="registerbtn"
+                        class="bg-teal-600 text-center text-md font-arial font-bold text-white w-fit py-1 px-3 rounded-md">
+                        Enroll Now
+                    </button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 py-10">
+                <div
+                    class="w-full h-full bg-white rounded-xl border border-gray-300 hover:shadow-xl px-5 py-6 cursor-pointer">
+                    <div class="w-full flex flex-wrap justify-between items-center gap-2 sm:gap-4">
+                        <button
+                            class="bg-teal-200 py-1 px-2 text-center font-arial font-bold text-xs text-gray-600 rounded-full">
+                            AI ML
+                        </button>
+                        <button
+                            class="bg-teal-200 py-1 px-2 text-center font-arial font-bold text-xs text-gray-600 rounded-md">
+                            🔥 PPO Opportunity
+                        </button>
+                    </div>
+                    <div class="py-2 flex justify-center items-center">
+                        <div class="space-y-3 min-w-0">
+                            <h1 class="text-md font-arial font-bold w-full sm:w-60">
+                                AI Machine Learning (120 Hours)
+                            </h1>
+                            <p class="text-xs font-arial text-gray-600">
+                                Role:
+                                <span class="font-semibold">
+                                    AI Engineer Intern
+                                </span>
+                                4 Weeks (120 Hrs)
+                            </p>
+                            <p class="text-xs font-arial text-gray-600">
+                                Mode: Online Live Openings: 100
+                            </p>
+                        </div>
+                    </div>
+                    <div class="border-b border-gray-200 w-full sm:w-66">
+                    </div>
+                    <div class="flex gap-2 items-center py-3">
+                        <h1 class="font-bold text-xl">
+                            ₹999
+                        </h1>
+                        <p class="line-through text-gray-400 text-sm">
+                            ₹2999
+                        </p>
+                        <p class="text-emerald-700 text-sm font-bold">
+                            save ₹200
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 justify-center items-start gap-3">
+                        <button @click="registerbtn"
+                            class="bg-teal-600 text-center text-sm font-arial font-bold text-white w-fit py-1 px-10 rounded-full">
+                            Enroll Now
+                        </button>
+                        <div class="bg-gray-100 hover:bg-amber-100 px-3 py-1 rounded-full">
+                            <i class="fa-regular fa-bookmark text-center text-xs">
+                            </i>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="w-full h-full bg-white rounded-xl border border-gray-300 hover:shadow-xl px-5 py-6 cursor-pointer">
+                    <div class="w-full flex flex-wrap justify-between items-center gap-2">
+                        <button
+                            class="bg-teal-200 py-1 px-2 text-center font-arial font-bold text-xs text-gray-600 rounded-full">
+                            Core Engg
+                        </button>
+                        <button
+                            class="bg-teal-200 py-1 px-2 text-center font-arial font-bold text-xs text-gray-600 rounded-md">
+                            ⚡ Hardware + Arduino
+                        </button>
+                    </div>
+                    <div class="py-2 flex justify-center items-center">
+                        <div class="space-y-3 min-w-0">
+                            <h1 class="text-md font-arial font-bold w-full sm:w-60">
+                                Embedded Systems, IoT Robotics
+                            </h1>
+                            <p class="text-xs font-arial text-gray-600">
+                                Role:
+                                <span class="font-semibold">
+                                    Embedded Trainee
+                                </span>
+                                4 Weeks (120 Hrs)
+                            </p>
+                            <p class="text-xs font-arial text-gray-600">
+                                Mode: Online + Sim Openings: 80
+                            </p>
+                        </div>
+                    </div>
+                    <div class="border-b border-gray-200 w-full sm:w-66">
+                    </div>
+                    <div class="flex gap-2 items-center py-3">
+                        <h1 class="font-bold text-xl">
+                            ₹1199
+                        </h1>
+                        <p class="line-through text-gray-400 text-sm">
+                            ₹3499
+                        </p>
+                        <p class="text-emerald-700 text-sm font-bold">
+                            save ₹2300
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 justify-center items-start gap-3">
+                        <button @click="registerbtn"
+                            class="bg-teal-600 text-center text-sm font-arial font-bold text-white w-fit py-1 px-10 rounded-full">
+                            Enroll Now
+                        </button>
+                        <div class="bg-gray-100 hover:bg-amber-100 px-3 py-1 rounded-full">
+                            <i class="fa-regular fa-bookmark text-center text-xs">
+                            </i>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="w-full h-full bg-white rounded-xl border border-gray-300 hover:shadow-xl px-5 py-6 cursor-pointer">
+                    <div class="w-full flex flex-wrap justify-between items-center gap-2 sm:gap-4">
+                        <button
+                            class="bg-teal-200 py-1 px-2 text-center font-arial font-bold text-xs text-gray-600 rounded-full">
+                            Web Dev
+                        </button>
+                        <button
+                            class="bg-teal-200 py-1 px-2 text-center font-arial font-bold text-xs text-gray-600 rounded-md">
+                            💼 Stipend Eligible
+                        </button>
+                    </div>
+                    <div class="py-2 flex justify-center items-center">
+                        <div class="space-y-3 min-w-0">
+                            <h1 class="text-md font-arial font-bold w-full sm:w-60">
+                                Full-Stack Web Development (MERN)
+                            </h1>
+                            <p class="text-xs font-arial text-gray-600">
+                                Role:
+                                <span class="font-semibold">
+                                    Full-Stack Intern
+                                </span>
+                                45 Days
+                            </p>
+                            <p class="text-xs font-arial text-gray-600">
+                                Mode: Online Live Openings: 120
+                            </p>
+                        </div>
+                    </div>
+                    <div class="border-b border-gray-200 w-full sm:w-66">
+                    </div>
+                    <div class="flex gap-2 items-center py-3">
+                        <h1 class="font-bold text-xl">
+                            799
+                        </h1>
+                        <p class="line-through text-gray-400 text-sm">
+                            ₹2499
+                        </p>
+                        <p class="text-emerald-700 text-sm font-bold">
+                            save ₹1700
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 justify-center items-start gap-3">
+                        <button @click="registerbtn"
+                            class="bg-teal-600 text-center text-sm font-arial font-bold text-white w-fit py-1 px-10 rounded-full">
+                            Enroll Now
+                        </button>
+                        <div class="bg-gray-100 hover:bg-amber-100 px-3 py-1 rounded-full">
+                            <i class="fa-regular fa-bookmark text-center text-xs">
+                            </i>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="w-full h-full bg-white rounded-xl border border-gray-300 hover:shadow-xl px-5 py-6 cursor-pointer">
+                    <div class="w-full flex flex-wrap justify-between items-center gap-2 sm:gap-4">
+                        <button
+                            class="bg-teal-200 py-1 px-2 text-center font-arial font-bold text-xs text-gray-600 rounded-full">
+                            Civil / Mech
+                        </button>
+                        <button
+                            class="bg-teal-200 py-1 px-2 text-center font-arial font-bold text-xs text-gray-600 rounded-md">
+                            🏆 Bestseller
+                        </button>
+                    </div>
+                    <div class="py-2 flex justify-center items-center">
+                        <div class="space-y-3 min-w-0">
+                            <h1 class="text-md font-arial font-bold w-full sm:w-60">
+                                AutoCAD 2D/3D Structural Design
+                            </h1>
+                            <p class="text-xs font-arial text-gray-600">
+                                Role:
+                                <span class="font-semibold">
+                                    CAD Design Intern
+                                </span>
+                                4 Weeks
+                            </p>
+                            <p class="text-xs font-arial text-gray-600">
+                                Mode: Online Live Openings: 100
+                            </p>
+                        </div>
+                    </div>
+                    <div class="border-b border-gray-200 w-full sm:w-66">
+                    </div>
+                    <div class="flex gap-2 items-center py-3">
+                        <h1 class="font-bold text-xl">
+                            ₹699
+                        </h1>
+                        <p class="line-through text-gray-400 text-sm">
+                            ₹1999
+                        </p>
+                        <p class="text-emerald-700 text-sm font-bold">
+                            save ₹1300
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 justify-center items-start gap-3">
+                        <button @click="registerbtn"
+                            class="bg-teal-600 text-center text-sm font-arial font-bold text-white w-fit py-1 px-10 rounded-full">
+                            Enroll Now
+                        </button>
+                        <div class="bg-gray-100 hover:bg-amber-100 px-3 py-1 rounded-full">
+                            <i class="fa-regular fa-bookmark text-center text-xs">
+                            </i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-gray-200 w-full h-fit px-4 sm:px-8 lg:px-30 py-10" id="three">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                    <p class="text-xs text-red-600 font-arial font-bold">
+                        DIRECT PLACEMENT PPO CELL
+                    </p>
+                    <h1 class="font-arial font-bold text-3xl">
+                        Live Company Job Openings PPO Drives
+                        <h1 class="font-arial text-sm text-gray-500">
+                            Students can apply in 1-Click using their Snapintern AI Resume
+                        </h1>
+                    </h1>
+                </div>
+                <div>
+                    <button @click="loginbtn"
+                        class="bg-black text-center text-xs font-arial font-bold text-white w-fit py-3 px-5 rounded-xl">
+                        Login to Apply for Jobs
+                        <i class="fa-solid fa-arrow-right-long text-xs">
+                        </i>
+                    </button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 py-5 items-stretch">
+                <div
+                    class="w-full h-fit bg-white rounded-xl border border-gray-300 hover:shadow-xl px-2 py-3 cursor-pointer">
+                    <div class="w-full flex justify-between items-center px-3 py-2">
+                        <button
+                            class="bg-teal-100 py-1 text-center font-arial font-bold text-xs text-gray-600 rounded-full w-35">
+                            Veridant Tech Labs
+                        </button>
+                        <button
+                            class="bg-emerald-200 py-1 px-2 text-center font-arial font-bold text-sm text-gray-600 rounded-md">
+                            ₹4.5 ₹7.0 LPA
+                        </button>
+                    </div>
+                    <div class="px-2">
+                        <h1 class="text-lg font-arial font-bold py-2">
+                            Junior AI ML Engineer (PPO)
+                        </h1>
+                        <p class="text-xs font-arial text-gray-600">
+                            <i class="fa-solid fa-location-dot">
+                            </i>
+                            Patna / Noida / Remote Openings: 12
+                        </p>
+                        <p class="text-xs font-arial text-gray-600">
+                            <span class="font-bold">
+                                Skills:
+                            </span>
+                            Python, ML, NLP, FastAPI
+                        </p>
+                    </div>
+                    <div class="flex justify-center items-center mt-10 mb-5">
+                        <button @click="resume"
+                            class="bg-cyan-950 text-center text-sm font-arial font-bold text-white w-fit py-1 px-15 rounded-full">
+                            1-Click Apply with AI Resume
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="w-full h-fit bg-white rounded-xl border border-gray-300 hover:shadow-xl px-2 py-3 cursor-pointer">
+                    <div class="w-full flex justify-between items-center px-3 py-2">
+                        <button
+                            class="bg-teal-100 py-1 text-center font-arial font-bold text-xs text-gray-600 rounded-full w-auto">
+                            NEXTGEN EMBEDDED CORP
+                        </button>
+                        <button
+                            class="bg-emerald-200 py-1 px-2 text-center font-arial font-bold text-sm text-gray-600 rounded-md">
+                            ₹4.0 ₹6.2 LPA
+                        </button>
+                    </div>
+                    <div class="px-2">
+                        <h1 class="text-lg font-arial font-bold py-2">
+                            Embedded Firmware Engineer
+                        </h1>
+                        <p class="text-xs font-arial text-gray-600">
+                            <i class="fa-solid fa-location-dot">
+                            </i>
+                            Pune / Bangalore Openings: 8
+                        </p>
+                        <p class="text-xs font-arial text-gray-600">
+                            <span class="font-bold">
+                                Skills:
+                            </span>
+                            Arduino, Embedded C, PCB, IoT
+                        </p>
+                    </div>
+                    <div class="flex justify-center items-center mt-10 mb-5">
+                        <button @click="resume"
+                            class="bg-cyan-950 text-center text-sm font-arial font-bold text-white w-fit py-1 px-15 rounded-full">
+                            1-Click Apply with AI Resume
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="w-full h-fit bg-white rounded-xl border border-gray-300 hover:shadow-xl px-2 py-3 cursor-pointer">
+                    <div class="w-full flex justify-between items-center px-3 py-2">
+                        <button
+                            class="bg-teal-100 py-1 text-center font-arial font-bold text-xs text-gray-600 rounded-full w-auto">
+                            CLOOUDSCALE WEB SOLUTIONS
+                        </button>
+                        <button
+                            class="bg-emerald-200 py-1 px-2 text-center font-arial font-bold text-sm text-gray-600 rounded-md">
+                            ₹3.8 ₹5.5 LPA
+                        </button>
+                    </div>
+                    <div class="px-2">
+                        <h1 class="text-lg font-arial font-bold py-2">
+                            Junior AI ML Engineer (PPO)
+                        </h1>
+                        <p class="text-xs font-arial text-gray-600">
+                            <i class="fa-solid fa-location-dot">
+                            </i>
+                            Patna / Noida / Remote Openings: 12
+                        </p>
+                        <p class="text-xs font-arial text-gray-600">
+                            <span class="font-bold">
+                                Skills:
+                            </span>
+                            Python, ML, NLP, FastAPI
+                        </p>
+                    </div>
+                    <div class="flex justify-center items-center mt-10 mb-5">
+                        <button @click="resume"
+                            class="bg-cyan-950 text-center text-sm font-arial font-bold text-white w-fit py-1 px-15 rounded-full">
+                            1-Click Apply with AI Resume
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-linear-to-r from-sky-950 from-10% via-sky-900 via-30% to-teal-300 to-90% w-full h-fit py-15"
+            id="four">
+            <div class="flex flex-col justify-center items-center px-4 sm:px-6">
+                <div class="px-3 py-1 rounded-full bg-white/30 backdrop-blur w-fit">
+                    <p class="font-arial text-teal-200 text-xs font-bold">
+                        DUAL-KEY CREDENTIAL VERIFICATION
+                    </p>
+                </div>
+                <h1 class="font-arial font-bold text-2xl sm:text-3xl text-white text-center">
+                    Verify by Certificate Number OR Registration Number
+                </h1>
+                <p class="font-arial text-sm text-teal-100">
+                    Instant verification for Colleges (AICTE/NAAC Audits) Recruiters
+                </p>
+                <div class="flex flex-wrap justify-center gap-3 py-5 w-full">
+                    <input class="bg-white py-3 px-2 rounded-lg w-full max-w-[480px]" type="text" />
+                    <button class="bg-emerald-300 px-2 py-3 rounded-lg font-bold">
+                        <i class="fa-solid fa-shield-halved">
+                        </i>
+                        Verify Now
+                    </button>
+                </div>
+                <div
+                    class="bg-white/30 backdrop-blur w-full max-w-[900px] h-fit rounded-lg border border-emerald-300 px-5 py-5">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center w-full gap-4">
+                        <p class="font-arial font-bold text-emerald-300 text-sm">
+                            <i class="fa-solid fa-circle-check">
+                            </i>
+                            100% Authentic Verified Credential (SNAP-REG-2026-4510)
+                        </p>
+                        <button class="bg-emerald-300 text-center py-1 px-3 rounded-xl text-sm font-semibold">
+                            Verify Official Certificate
+                        </button>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-5 pt-5">
+                        <div class="space-y-2 text-white">
+                            <p class="font-arial text-sm">
+                                Student Name:
+                                <span class="font-semibold">
+                                    Aman Kumar (Roll: 22CSE45)
+                                </span>
+                            </p>
+                            <p class="font-arial text-sm">
+                                Certificate No:
+                                <span class="font-semibold text-emerald-300">
+                                    SNAP-CERT-2026-0891
+                                </span>
+                            </p>
+                            <p class="font-arial text-sm">
+                                College:
+                                <span class="font-semibold">
+                                    Gaya College of Engineering (GCE)
+                                </span>
+                            </p>
+                        </div>
+                        <div class="space-y-2 text-white">
+                            <p class="font-arial text-sm">
+                                Registration No:
+                                <span class="font-semibold">
+                                    SNAP-REG-2026-4510
+                                </span>
+                            </p>
+                            <p class="font-arial text-sm">
+                                Course Completed:
+                                <span class="font-semibold">
+                                    AI Machine Learning (120 Hours)
+                                </span>
+                            </p>
+                            <p class="font-arial text-sm">
+                                Issued By:
+                                <span class="font-semibold">
+                                    SNAPINTERN (Aakash Raj 9304049971)
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="w-full h-fit px-4 sm:px-8 lg:px-30 py-10 bg-gray-50" id="five">
+            <div>
+                <div>
+                    <p class="text-sm text-teal-600 font-arial font-semibold">
+                        Campus Drives, MoUs Workshops
+                    </p>
+                    <h1 class="font-arial font-bold text-2xl">
+                        Snapintern Institutional Gallery
+                    </h1>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 py-10">
+                    <div
+                        class="bg-[url('https://static.vecteezy.com/system/resources/previews/055/148/068/non_2x/emerald-green-wave-gradient-background-vector.jpg')] bg-cover bg-center w-full min-h-[180px] h-fit rounded-xl">
+                        <div class="p-5 space-y-10">
+                            <button
+                                class="text-xs font-arial text-white font-semibold bg-white/30 backdrop-blur py-1 px-2 rounded-full">
+                                College Visit
+                            </button>
+                            <p class="text-white font-arial font-bold text-lg">
+                                GEC Gaya Campus Seminar MoU Drive
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-[url('https://static.vecteezy.com/system/resources/previews/055/148/068/non_2x/emerald-green-wave-gradient-background-vector.jpg')] bg-cover bg-center w-full min-h-[180px] h-fit rounded-xl">
+                        <div class="p-5 space-y-10">
+                            <button
+                                class="text-xs font-arial text-white font-semibold bg-white/30 backdrop-blur py-1 px-2 rounded-full">
+                                Workshop
+                            </button>
+                            <p class="text-white font-arial font-bold text-lg">
+                                SPNREC Araria Internship Orientation
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-[url('https://static.vecteezy.com/system/resources/previews/055/148/068/non_2x/emerald-green-wave-gradient-background-vector.jpg')] bg-cover bg-center w-full min-h-[180px] h-fit rounded-xl">
+                        <div class="p-5 space-y-10">
+                            <button
+                                class="text-xs font-arial text-white font-semibold bg-white/30 backdrop-blur py-1 px-2 rounded-full">
+                                Live Lab
+                            </button>
+                            <p class="text-white font-arial font-bold text-lg">
+                                120-Hours Robotics IoT Practical Lab
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-[url('https://static.vecteezy.com/system/resources/previews/055/148/068/non_2x/emerald-green-wave-gradient-background-vector.jpg')] bg-cover bg-center w-full min-h-[180px] h-fit rounded-xl">
+                        <div class="p-5 space-y-10">
+                            <button
+                                class="text-xs font-arial text-white font-semibold bg-white/30 backdrop-blur py-1 px-2 rounded-full">
+                                Placemnet Drive
+                            </button>
+                            <p class="text-white font-arial font-bold text-lg">
+                                Patna Head Office PPO Felicitation
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-5 grid grid-cols-1 xl:grid-cols-2 justify-center items-stretch gap-5">
+                    <div
+                        class="border border-gray-200 shadow-md bg-white w-full max-w-[600px] h-auto min-h-[460px] rounded-xl px-5 py-7 space-y-5">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="text-xs text-teal-600 font-arial font-bold">
+                                    VERIFIED INTERN FEEDBACK
+                                </p>
+                                <h1 class="font-bold text-2xl">
+                                    Student Testimonials
+                                </h1>
+                            </div>
+                            <p class="text-xs text-teal-600 font-arial font-bold hover:underline cursor-pointer">
+                                + Submit Feedback
+                            </p>
+                        </div>
+                        <div class="border border-gray-300 w-full rounded-lg h-fit bg-slate-100 px-4 py-3">
+                            <div class="flex flex-col sm:flex-row justify-between gap-3">
+                                <div>
+                                    <p class="text-xs text-black font-arial font-semibold">
+                                        Priya Sharma
+                                        <span class="text-teal-700">
+                                            SPNREC Araria (B.Tech ECE)
+                                        </span>
+                                    </p>
+                                    <p class="text-xs text-black font-arial">
+                                        "The 120-Hours interactive HTML module and live robotics sessions were
+                                        outstanding! I downloaded my auto-filled project report QR certificate in
+                                        1 click."
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="text-yellow-auto0">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border border-gray-300 w-full rounded-lg h-fit bg-slate-100 px-4 py-3">
+                            <div class="flex flex-col sm:flex-row justify-between gap-3">
+                                <div>
+                                    <p class="text-xs text-black font-arial font-semibold">
+                                        Rohit Verma
+                                        <span class="text-teal-700">
+                                            MIT Muzaffarpur (B.Tech CSE)
+                                        </span>
+                                    </p>
+                                    <p class="text-xs text-black font-arial">
+                                        "Snapintern AI Resume Builder AI Mock Interview helped me score 91% on ATS
+                                        and land a direct PPO interview!"
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="text-yellow-auto0">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="border border-gray-200 shadow-md bg-white w-full max-w-[600px] h-fit rounded-xl px-5 py-7">
+                        <div class="space-y-5">
+                            <div>
+                                <p class="text-xs text-red-600 font-arial font-bold">
+                                    24x7 STUDENT SUPPORT GRIEVANCE REDRESSAL
+                                </p>
+                                <h1 class="font-bold text-2xl">
+                                    Submit a Grievance / Contact Head Office
+                                </h1>
+                            </div>
+                            <div class="border border-gray-300 w-full rounded-lg h-fit bg-slate-100 px-4 py-3">
+                                <div class="space-y-2">
+                                    <p class="text-xs font-arial">
+                                        <i class="fa-solid fa-building">
+                                        </i>
+                                        <span class="font-bold">
+                                            Head Office:
+                                        </span>
+                                        Ramkrishana Nagar, Shorangpur, Ghana Colony, Patna 800027
+                                    </p>
+                                    <p class="text-xs font-arial">
+                                        <i class="fa-solid fa-user-tie">
+                                        </i>
+                                        <span class="font-bold">
+                                            Contact Person:
+                                        </span>
+                                        Aakash Raj
+                                    </p>
+                                    <p class="text-xs font-arial">
+                                        <i class="fa-solid fa-phone-volume">
+                                        </i>
+                                        <span class="font-bold">
+                                            Helpline / WhatsApp:
+                                        </span>
+                                        +91 9304049971
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row items-stretch md:items-center gap-2">
+                                <input class="border border-gray-200 text-sm px-5 py-2 rounded-xl w-full"
+                                    placeholder="Your Name*" type="text" />
+                                <input class="border border-gray-200 text-sm px-5 py-2 rounded-xl w-full"
+                                    placeholder="Reg No. or Mobile No.*" type="text" />
+                            </div>
+                            <select
+                                class="border border-gray-200 text-sm px-5 py-2 rounded-xl w-full font-arial font-semibold">
+                                <option value="">
+                                    Roll Number / Name / Profile Correction
+                                </option>
+                                <option value="">
+                                    Live Class / 120-Hours HTML Material Issue
+                                </option>
+                                <option value="">
+                                    Payment / Cash Approval / Receipt Issue
+                                </option>
+                                <option value="">
+                                    Certificate / Auto Project Report Query
+                                </option>
+                            </select>
+                            <textarea class="w-full border border-gray-200 text-xs px-5 py-2 rounded-xl"
+                                placeholder="Describe your grievance in detail..."></textarea>
+                        </div>
+                        <button @click="grievance"
+                            class="bg-rose-600 w-full text-center font-arial font-semibold text-xs py-3 rounded-lg text-white mt-3">
+                            Submit Grievance Ticket
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="bg-slate-950 w-full h-auto px-4 sm:px-8 lg:px-30 py-5">
+            <div class="grid grid-cols-1 lg:grid-cols-3 items-start gap-8 lg:gap-10">
+                <div>
+                    <div class="bg-white rounded-md w-fit px-4 py-3 flex justify-center items-center">
+                        <img alt="" class="w-12 h-12 rounded-full"
+                            src="https://i1.sndcdn.com/artworks-Cd1lPdzGhwOyaljq-ELnozA-t500x500.jpg" />
+                        <div>
+                            <p class="text-teal-700 text-xl font-bold">
+                                SNAP
+                                <span class="text-black">
+                                    INTERN
+                                </span>
+                            </p>
+                            <p class="text-xs font-arial font-semibold text-gray-500">
+                                SNAP INTO THE FUTURE
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-gray-500 text-xs font-arial py-1 font-semibold w-full max-w-[400px]">
+                        India's Smartest AICTE 120-Hours Internship, LMS Direct PPO Hiring Platform.
+                    </p>
+                </div>
+                <div class="">
+                    <p class="text-md font-bold text-white font-arial py-2">
+                        REGISTERED OFFICE CONTACT
+                    </p>
+                    <p class="text-xs font-arial text-gray-500">
+                        <i class="fa-solid fa-building text-teal-600">
+                        </i>
+                        Head Office:
+                        <span class="font-bold">
+                            Ramkrishana Nagar, Shorangpur, Ghana
+                        </span>
+                        Colony, Patna 800027
+                    </p>
+                    <p class="text-xs font-arial text-gray-500">
+                        <i class="fa-solid fa-user-tie text-teal-600">
+                        </i>
+                        Contact Person:
+                        <span class="font-bold">
+                            Aakash Raj
+                        </span>
+                    </p>
+                    <p class="text-xs font-arial text-gray-500">
+                        <i class="fa-solid fa-phone-volume text-teal-600">
+                        </i>
+                        Helpline / WhatsApp:
+                        <span class="text-emerald-400 font-bold">
+                            +91 9304049971
+                        </span>
+                    </p>
+                </div>
+                <div class="space-y-5 text-start lg:text-end">
+                    <p class="text-white font-bold text-md">
+                        Quick Navigation
+                    </p>
+                    <div class="flex flex-col md:flex-row items-stretch md:items-center gap-2">
+                        <p class="text-gray-500 font-arial font-semibold text-xs">
+                            Home
+                        </p>
+                        <p class="text-gray-500 font-arial font-semibold text-xs">
+                            Internship
+                        </p>
+                        <p class="text-gray-500 font-arial font-semibold text-xs">
+                            Internships
+                        </p>
+                        <p class="text-gray-500 font-arial font-semibold text-xs">
+                            Jobs PPO
+                        </p>
+                        <p class="text-gray-500 font-arial font-semibold text-xs">
+                            VerifyCertificate
+                        </p>
+                        <p class="text-gray-500 font-arial font-semibold text-xs">
+                            Grievance
+                        </p>
+                    </div>
+                    <p class="text-gray-500 font-arial text-xs">
+                        2026
+                        <span class="font-bold">
+                            SNAPINTERN.
+                        </span>
+                        All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    logIn: false,
+                    first: true,
+                    second: false,
+                }
+            },
+            methods: {
+                loginbtn() {
+                    this.logIn = true;
+                },
+                xbtn() {
+                    this.logIn = false;
+                },
+                firstbtn() {
+                    this.first = true;
+                    this.second = false;
+                },
+                secondbtn() {
+                    this.first = false;
+                    this.second = true;
+                },
+                registerbtn() {
+                    this.logIn = true;
+                    this.second = true;
+                    this.first = false;
+                },
+                resume() {
+                    alert('🚀 Applied to Veridant Tech Labs (Junior AI & ML Engineer (PPO)) using your Snapintern AI Resume!')
+                },
+                grievance() {
+                    alert('Please enter your complaint message.')
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+
+</html>
